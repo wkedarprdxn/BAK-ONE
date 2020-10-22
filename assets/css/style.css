@@ -694,6 +694,7 @@ footer {
     }
     nav ul li a {
         width: 100%;
+        color: white;
     }
 }
 
