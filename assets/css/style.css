@@ -234,6 +234,10 @@ li {
     margin: 0 auto;
 }
 
+:root {
+    --tcolor: #45b39e;
+}
+
 
 /*=================================
   container ends here
@@ -247,7 +251,6 @@ li {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px;
 }
 
 .heading-wrap {
@@ -259,6 +262,7 @@ header {
     width: 75px;
     height: 75px;
     margin: auto 5px;
+    cursor: pointer;
 }
 
 .heading-wrap div {
@@ -268,6 +272,7 @@ header {
 .heading-wrap div h1 {
     font-size: xx-large;
     text-decoration: none;
+    cursor: pointer;
 }
 
 nav {
@@ -282,7 +287,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #45b39e;
+    background-color: var(--tcolor);
     color: white;
 }
 
@@ -295,6 +300,223 @@ nav ul li a:hover {
 /*=================================
   main styling starts here
 =================================*/
+
+.banner-img {
+    margin-bottom: 50px;
+}
+
+.part-1 {
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 30px;
+}
+
+.part-1 h2 {
+    font-size: x-large;
+}
+
+.part-1 ul li button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--tcolor);
+    color: white;
+}
+
+.part-1 ul li button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.part2-grid {
+    margin-bottom: 50px;
+}
+
+.part2-grid ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 50px;
+}
+
+.about-us {
+    background-color: var(--tcolor);
+}
+
+.part1 {
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.part1 h2 {
+    font-size: x-large;
+}
+
+.part2-peoples {
+    display: flex;
+}
+
+.card-wrap {
+    margin: 0px 40px 40px;
+    background-color: white;
+}
+
+.card-wrap figure {
+    position: relative;
+}
+
+.card-wrap figure img:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0.7;
+}
+
+.card-wrap h3 {
+    text-align: center;
+    font-size: larger;
+    margin: 15px 0px auto;
+}
+
+.card-wrap i {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.card-wrap p {
+    padding: 0px 5px;
+}
+
+.part2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.part2>div {
+    flex: 50%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 0px 5px;
+}
+
+form textarea {
+    grid-column: 1 /span 2;
+}
+
+form textarea+input {
+    grid-column: 2;
+    width: 50%;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background-color: var(--tcolor);
+    padding: 10px;
+}
+
+form textarea+input:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+form textarea+input:active {
+    background-color: green;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+textarea {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+textarea:focus {
+    border: 3px solid #555;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.information {
+    padding-left: 10px;
+}
+
+.information h3 {
+    font-size: larger;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.information ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.information ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.information ul li i {
+    position: absolute;
+    left: -18px;
+}
+
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.location::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f3c5";
+}
+
+.telephone::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1e4";
+}
+
+.fax::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1ac";
+}
+
+.email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0";
+}
 
 
 /*=================================
@@ -317,4 +539,17 @@ nav ul li a:hover {
 
 /*media query for 995px starts here*/
 
-@media only screen and (max-width: 995px) {}
+@media only screen and (max-width: 995px) {
+    .part2-grid ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px;
+    }
+    .part2-peoples {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .part2>div {
+        flex: 100%;
+    }
+}
