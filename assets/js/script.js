@@ -11,10 +11,4 @@ $(document).ready(function() {
             $('.filter').filter('.' + val).show(1000);
         }
     });
-    $(".filter").mouseover(function() {
-        $(this).css('opacity', '.4');
-        $(this).css('cursor', 'pointer');
-    }).mouseout(function() {
-        $(this).css('opacity', '1');
-    });
 });
