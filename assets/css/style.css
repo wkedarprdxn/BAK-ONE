@@ -223,12 +223,6 @@ li {
   container starts here
 =================================*/
 
-.container {
-    max-width: 1800px;
-    width: 80%;
-    margin: 0 auto;
-}
-
 .modified-wrapper {
     width: 90%;
     margin: 0 auto;
@@ -391,6 +385,14 @@ nav ul li a:hover {
     padding: 0px 5px;
 }
 
+
+/* ++++++++++ contact us++++++++++ */
+
+.contact-us {
+    padding-bottom: 40px;
+    background-color: #F0F0F0;
+}
+
 .part2 {
     display: flex;
     flex-wrap: wrap;
@@ -528,6 +530,43 @@ textarea:focus {
   footer styling starts here
 =================================*/
 
+footer {
+    background-color: rgb(45, 54, 82);
+    color: white;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.up-arrow::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bolder;
+    font-size: larger;
+    content: "\f077";
+}
+
+.upArrow button {
+    padding: 10px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: var(--tcolor);
+}
+
+.upArrow button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.copyRight,
+.upArrow {
+    margin: auto 0px;
+}
+
 
 /*=================================
   footer styling ends here
@@ -551,5 +590,21 @@ textarea:focus {
     }
     .part2>div {
         flex: 100%;
+    }
+    .upArrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .copyRight {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        max-width: 1800px;
+        width: 80%;
+        margin: 0 auto;
     }
 }
