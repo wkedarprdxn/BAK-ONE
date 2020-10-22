@@ -326,6 +326,44 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 
+.part2-grid .filter {
+    position: relative;
+}
+
+.part2-grid .filter .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.part2-grid .filter .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.part2-grid .filter:hover .middle {
+    opacity: 1;
+}
+
+.part2-grid .filter:hover .image {
+    opacity: 0.3;
+}
+
+.search::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f002";
+}
+
 .part2-grid ul {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
