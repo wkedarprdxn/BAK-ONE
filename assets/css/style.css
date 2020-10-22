@@ -285,6 +285,34 @@ nav ul li a:hover {
     color: white;
 }
 
+.tog-wrap {
+    display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(66, 66, 66);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 
 /*=================================
   Header styling ends here
@@ -642,6 +670,29 @@ footer {
     }
     .copyRight {
         margin: auto;
+    }
+    .tog-wrap {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: auto;
+        right: 0px;
+        margin-right: auto;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+    }
+    nav ul li a {
+        width: 100%;
     }
 }
 
