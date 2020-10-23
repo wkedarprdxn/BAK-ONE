@@ -376,6 +376,7 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    font-size: larger;
 }
 
 .part2-grid .filter:hover .middle {
@@ -383,7 +384,14 @@ nav ul li a:hover {
 }
 
 .part2-grid .filter:hover .image {
-    opacity: 0.3;
+    opacity: 0.2;
+}
+
+.middle .text {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: x-large;
 }
 
 .search::before {
